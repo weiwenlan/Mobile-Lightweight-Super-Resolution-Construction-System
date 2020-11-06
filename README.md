@@ -18,4 +18,4 @@ Improvement made based on the MobilenetV2 and EDSR.
 
 # DEMO
  This is the final demo of our project! By using the App, you could easily reconstruct all images with a simple click!
-![Demo](gif.gif)
+<div align=center><img  src="https://github.com/weiwenlan/Mobile-Lightweight-Super-Resolution-Construction-System/blob/main/gif.gif"/></div>
