@@ -1,0 +1,89 @@
+7767517
+87 104
+Input            data             0 1 data 0=224 1=224 2=3
+Convolution      Convolution1     1 1 data Convolution1 0=64 1=3 2=1 3=1 4=1 5=1 6=576
+Split            splitncnn_0      1 3 Convolution1 Convolution1_splitncnn_0 Convolution1_splitncnn_1 Convolution1_splitncnn_2
+ConvolutionDepthWise Convolution2     1 1 Convolution1_splitncnn_2 Convolution2 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU1            1 1 Convolution2 ReLU1
+Convolution      Convolution3     1 1 ReLU1 Convolution3 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum1             2 1 Convolution1_splitncnn_1 Convolution3 sum1 0=1 -23301=0
+Split            splitncnn_1      1 2 sum1 sum1_splitncnn_0 sum1_splitncnn_1
+ConvolutionDepthWise Convolution4     1 1 sum1_splitncnn_1 Convolution4 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU2            1 1 Convolution4 ReLU2
+Convolution      Convolution5     1 1 ReLU2 Convolution5 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum2             2 1 sum1_splitncnn_0 Convolution5 sum2 0=1 -23301=0
+Split            splitncnn_2      1 2 sum2 sum2_splitncnn_0 sum2_splitncnn_1
+ConvolutionDepthWise Convolution6     1 1 sum2_splitncnn_1 Convolution6 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU3            1 1 Convolution6 ReLU3
+Convolution      Convolution7     1 1 ReLU3 Convolution7 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum3             2 1 sum2_splitncnn_0 Convolution7 sum3 0=1 -23301=0
+Split            splitncnn_3      1 2 sum3 sum3_splitncnn_0 sum3_splitncnn_1
+ConvolutionDepthWise Convolution8     1 1 sum3_splitncnn_1 Convolution8 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU4            1 1 Convolution8 ReLU4
+Convolution      Convolution9     1 1 ReLU4 Convolution9 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum4             2 1 sum3_splitncnn_0 Convolution9 sum4 0=1 -23301=0
+Split            splitncnn_4      1 2 sum4 sum4_splitncnn_0 sum4_splitncnn_1
+ConvolutionDepthWise Convolution10    1 1 sum4_splitncnn_1 Convolution10 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU5            1 1 Convolution10 ReLU5
+Convolution      Convolution11    1 1 ReLU5 Convolution11 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum5             2 1 sum4_splitncnn_0 Convolution11 sum5 0=1 -23301=0
+Split            splitncnn_5      1 2 sum5 sum5_splitncnn_0 sum5_splitncnn_1
+ConvolutionDepthWise Convolution12    1 1 sum5_splitncnn_1 Convolution12 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU6            1 1 Convolution12 ReLU6
+Convolution      Convolution13    1 1 ReLU6 Convolution13 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum6             2 1 sum5_splitncnn_0 Convolution13 sum6 0=1 -23301=0
+Split            splitncnn_6      1 2 sum6 sum6_splitncnn_0 sum6_splitncnn_1
+ConvolutionDepthWise Convolution14    1 1 sum6_splitncnn_1 Convolution14 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU7            1 1 Convolution14 ReLU7
+Convolution      Convolution15    1 1 ReLU7 Convolution15 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum7             2 1 sum6_splitncnn_0 Convolution15 sum7 0=1 -23301=0
+Split            splitncnn_7      1 2 sum7 sum7_splitncnn_0 sum7_splitncnn_1
+ConvolutionDepthWise Convolution16    1 1 sum7_splitncnn_1 Convolution16 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU8            1 1 Convolution16 ReLU8
+Convolution      Convolution17    1 1 ReLU8 Convolution17 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum8             2 1 sum7_splitncnn_0 Convolution17 sum8 0=1 -23301=0
+Split            splitncnn_8      1 2 sum8 sum8_splitncnn_0 sum8_splitncnn_1
+ConvolutionDepthWise Convolution18    1 1 sum8_splitncnn_1 Convolution18 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU9            1 1 Convolution18 ReLU9
+Convolution      Convolution19    1 1 ReLU9 Convolution19 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum9             2 1 sum8_splitncnn_0 Convolution19 sum9 0=1 -23301=0
+Split            splitncnn_9      1 2 sum9 sum9_splitncnn_0 sum9_splitncnn_1
+ConvolutionDepthWise Convolution20    1 1 sum9_splitncnn_1 Convolution20 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU10           1 1 Convolution20 ReLU10
+Convolution      Convolution21    1 1 ReLU10 Convolution21 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum10            2 1 sum9_splitncnn_0 Convolution21 sum10 0=1 -23301=0
+Split            splitncnn_10     1 2 sum10 sum10_splitncnn_0 sum10_splitncnn_1
+ConvolutionDepthWise Convolution22    1 1 sum10_splitncnn_1 Convolution22 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU11           1 1 Convolution22 ReLU11
+Convolution      Convolution23    1 1 ReLU11 Convolution23 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum11            2 1 sum10_splitncnn_0 Convolution23 sum11 0=1 -23301=0
+Split            splitncnn_11     1 2 sum11 sum11_splitncnn_0 sum11_splitncnn_1
+ConvolutionDepthWise Convolution24    1 1 sum11_splitncnn_1 Convolution24 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU12           1 1 Convolution24 ReLU12
+Convolution      Convolution25    1 1 ReLU12 Convolution25 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum12            2 1 sum11_splitncnn_0 Convolution25 sum12 0=1 -23301=0
+Split            splitncnn_12     1 2 sum12 sum12_splitncnn_0 sum12_splitncnn_1
+ConvolutionDepthWise Convolution26    1 1 sum12_splitncnn_1 Convolution26 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU13           1 1 Convolution26 ReLU13
+Convolution      Convolution27    1 1 ReLU13 Convolution27 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum13            2 1 sum12_splitncnn_0 Convolution27 sum13 0=1 -23301=0
+Split            splitncnn_13     1 2 sum13 sum13_splitncnn_0 sum13_splitncnn_1
+ConvolutionDepthWise Convolution28    1 1 sum13_splitncnn_1 Convolution28 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU14           1 1 Convolution28 ReLU14
+Convolution      Convolution29    1 1 ReLU14 Convolution29 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum14            2 1 sum13_splitncnn_0 Convolution29 sum14 0=1 -23301=0
+Split            splitncnn_14     1 2 sum14 sum14_splitncnn_0 sum14_splitncnn_1
+ConvolutionDepthWise Convolution30    1 1 sum14_splitncnn_1 Convolution30 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU15           1 1 Convolution30 ReLU15
+Convolution      Convolution31    1 1 ReLU15 Convolution31 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum15            2 1 sum14_splitncnn_0 Convolution31 sum15 0=1 -23301=0
+Split            splitncnn_15     1 2 sum15 sum15_splitncnn_0 sum15_splitncnn_1
+ConvolutionDepthWise Convolution32    1 1 sum15_splitncnn_1 Convolution32 0=64 1=3 2=1 3=1 4=1 5=1 6=576 7=64
+ReLU             ReLU16           1 1 Convolution32 ReLU16
+Convolution      Convolution33    1 1 ReLU16 Convolution33 0=64 1=1 2=1 3=1 4=0 5=1 6=4096
+Eltwise          sum16            2 1 sum15_splitncnn_0 Convolution33 sum16 0=1 -23301=0
+Convolution      Convolution34    1 1 sum16 Convolution34 0=64 1=3 2=1 3=1 4=1 5=1 6=36864
+Eltwise          sum17            2 1 Convolution1_splitncnn_0 Convolution34 sum17 0=1 -23301=0
+Convolution      Convolution35    1 1 sum17 Convolution35 0=128 1=3 2=1 3=1 4=1 5=1 6=73728
+Deconvolution    Deconvolution1   1 1 Convolution35 Deconvolution1 0=64 1=4 2=1 3=4 4=0 5=1 6=131072
+Convolution      reconstruct      1 1 Deconvolution1 reconstruct 0=1 1=3 2=1 3=1 4=1 5=1 6=576
