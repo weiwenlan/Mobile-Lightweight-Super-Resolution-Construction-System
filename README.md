@@ -1,5 +1,7 @@
 # Mobile-Lightweight-Super-Resolution-Construction-System
 These codes enables you to construct super-resolution image on the portable devices, tested on HUAWEI Mate 20. The super-resolution part use the same result of our paper [Lightweight Image Super-Resolution With Mobile Share-Source Network](https://ieeexplore.ieee.org/abstract/document/9045996). For the portable caculation part, we implemented the [NCNN](https://github.com/Tencent/ncnn) and transfered the model.
+ - MSSN_code contains all codes associate with MSSN super-resolution reconstruction network
+ - MobileNetSSD contains all codes to deploy model on the Android platform
 
 ## Abstract
 
